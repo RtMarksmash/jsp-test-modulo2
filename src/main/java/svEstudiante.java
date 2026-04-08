@@ -5,11 +5,15 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import logica.Estudiante;
 
 /**
  *
@@ -57,14 +61,19 @@ public class svEstudiante extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        int codigo = Integer.parseInt(request.getParameter("Codigo"));
-        String nombre = request.getParameter("Nombre");
-        String apellido = request.getParameter("Apellido");
-        int edad = Integer.parseInt(request.getParameter("Edad"));
+        List<Estudiante> estudiantes = new ArrayList();
         
-        System.out.println("codigo: " + codigo + " name: " + nombre + " apellido: " + apellido + " edad: " + edad);
+        estudiantes.add(new Estudiante(103,"carlo","hernandez",34));
+        estudiantes.add(new Estudiante(102,"carlo","hernandez",36));
+        estudiantes.add(new Estudiante(101,"carlo","hernandez",45));
+        estudiantes.add(new Estudiante(105,"carlo","hernandez",44));
         
+        HttpSession session = request.getSession();
+        
+        session.setAttribute("listaEstudiante", estudiantes);
+        response.sendRedirect("lista.jsp");
         processRequest(request, response);
+       
     }
 
     /**
@@ -78,6 +87,16 @@ public class svEstudiante extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        int codigo = Integer.parseInt(request.getParameter("Codigo"));
+        String nombre = request.getParameter("Nombre");
+        String apellido = request.getParameter("Apellido");
+        int edad = Integer.parseInt(request.getParameter("Edad"));
+        
+        System.out.println("codigo: " + codigo + " name: " + nombre + " apellido: " + apellido + " edad: " + edad);
+        
+        
+        
         processRequest(request, response);
     }
 
