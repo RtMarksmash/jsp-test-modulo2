@@ -1,0 +1,34 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 5/04/2026, 10:30:11 a. m.
+    Author     : USUARIO
+*/
+
+header img {
+    width: 100%;
+    border-style: solid;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.cuerpo {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    background-color: aqua;
+    max-width: 900px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+
+

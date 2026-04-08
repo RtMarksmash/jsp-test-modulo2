@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="./style.css"/>
+        <link rel="stylesheet" href="./css/style.css"/>
         <title>JSP Page</title>
     </head>
-    
+    <body>
     <div class="cuerpo">
         <header>
             <img><img src="src" alt="alt"/>
@@ -23,24 +23,32 @@
                  <article>
                      <fieldset>
                          <legend>registrar usuario</legend>
-                         <form>
-                             <label for="TxtCodigo">Codigo</label>
-                             <input type="number" id="TxtCodigo" name="Codigo">
-                             <label for="TxtNombre">Nombre</label>
-                             <input type="number" id="TxtNombre" name="Nombre">
-                             <label for="TxtApellido">Apellido</label>
-                             <input type="text" id="TxtApellido" name="Apellido">
-                             <label for="TxtEdad">Edad</label>
-                             <input type="number" id="TxtEdad" name="Edad">
+                         <form  action="svEstudiante" method="POST"  >
+                             <label for="TxtCodigo">Codigo</label><br>
+                             <input type="number" id="TxtCodigo" name="Codigo"><br>
+                             <label for="TxtNombre">Nombre</label><br>
+                             <input type="number" id="TxtNombre" name="Nombre"><br>
+                             <label for="TxtApellido">Apellido</label><br>
+                             <input type="text" id="TxtApellido" name="Apellido"><br>
+                             <label for="TxtEdad">Edad</label><br>
+                             <input type="number" id="TxtEdad" name="Edad"><br>
                              
                              <input type="submit" value="Registrar">
+                         </form>
+                     </fieldset>
+                 </article>
+                 <article>
+                     <fieldset>
+                         <legend>Consultar Estudiante</legend>
+                         <p>presiona el boton para consultar el estudiante</p>
+                         <form>
+                             <input type="submit" value="Consultar">
                          </form>
                      </fieldset>
                  </article>
              </section>
          </nav>
     </div>
-    <body>
         
     </body>
 </html>
