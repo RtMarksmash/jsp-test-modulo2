@@ -71,7 +71,7 @@ public class svEstudiante extends HttpServlet {
         HttpSession session = request.getSession();
         
         session.setAttribute("listaEstudiante", estudiantes);
-        response.sendRedirect("lista.jsp");
+        response.sendRedirect("listar.jsp");
         processRequest(request, response);
        
     }

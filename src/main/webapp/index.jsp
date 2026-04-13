@@ -41,7 +41,7 @@
                      <fieldset>
                          <legend>Consultar Estudiante</legend>
                          <p>presiona el boton para consultar el estudiante</p>
-                         <form>
+                         <form action="svEstudiante" method="get">
                              <input type="submit" value="Consultar">
                          </form>
                      </fieldset>
