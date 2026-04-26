@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import logica.Controladora;
 import logica.Estudiante;
 
 /**
@@ -63,10 +64,10 @@ public class svEstudiante extends HttpServlet {
         
         List<Estudiante> estudiantes = new ArrayList();
         
-        estudiantes.add(new Estudiante(103,"carlo","hernandez",34));
-        estudiantes.add(new Estudiante(102,"carlo","hernandez",36));
-        estudiantes.add(new Estudiante(101,"carlo","hernandez",45));
-        estudiantes.add(new Estudiante(105,"carlo","hernandez",44));
+        
+        Controladora control = new Controladora();
+        
+        estudiantes = control.consultarEstudiantes();
         
         HttpSession session = request.getSession();
         
@@ -93,8 +94,15 @@ public class svEstudiante extends HttpServlet {
         String apellido = request.getParameter("Apellido");
         int edad = Integer.parseInt(request.getParameter("Edad"));
         
-        System.out.println("codigo: " + codigo + " name: " + nombre + " apellido: " + apellido + " edad: " + edad);
+        Estudiante e = new Estudiante();
+        e.setCodigo(codigo);
+        e.setNombre(nombre);
+        e.setApellido(apellido);
+        e.setEdad(edad);
         
+        Controladora control = new Controladora();
+        
+        control.crearEstudiante(e);
         
         
         processRequest(request, response);

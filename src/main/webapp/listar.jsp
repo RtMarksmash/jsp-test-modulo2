@@ -21,11 +21,11 @@
         %>
         <h1>listar Estudiantes</h1>
         
-        <p>usuario numero<%=cont%></p>
-        <p>Codigo<%=e.getCodigo()  %></p>
-        <p>Nombre<%=e.getNombre()%></p>
-        <p>Apellido<%=e.getApellido()%></p>
-        <p>Edad<%=e.getEdad()%></p>
+        <p>usuario numero: <%=cont%></p>
+        <p>Codigo: <%=e.getCodigo()  %></p>
+        <p>Nombre: <%=e.getNombre()%></p>
+        <p>Apellido: <%=e.getApellido()%></p>
+        <p>Edad: <%=e.getEdad()%></p>
         
         <% cont=cont + 1;}   %>
         

@@ -4,14 +4,24 @@
  */
 package logica;
 
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  *
  * @author USUARIO
  */
-public class Estudiante {
+@Entity
+public class Estudiante{
+    @Id
     int codigo;
+    @Basic
     String nombre;
+    @Basic
     String apellido;
+    @Basic
     int edad;
 
     public Estudiante(int codigo, String nombre, String apellido, int edad) {
@@ -19,6 +29,9 @@ public class Estudiante {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+    }
+    
+    public Estudiante(){
     }
 
     public int getCodigo() {

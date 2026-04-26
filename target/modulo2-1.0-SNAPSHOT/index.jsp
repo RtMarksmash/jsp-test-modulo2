@@ -27,7 +27,7 @@
                              <label for="TxtCodigo">Codigo</label><br>
                              <input type="number" id="TxtCodigo" name="Codigo"><br>
                              <label for="TxtNombre">Nombre</label><br>
-                             <input type="number" id="TxtNombre" name="Nombre"><br>
+                             <input type="text" id="TxtNombre" name="Nombre"><br>
                              <label for="TxtApellido">Apellido</label><br>
                              <input type="text" id="TxtApellido" name="Apellido"><br>
                              <label for="TxtEdad">Edad</label><br>

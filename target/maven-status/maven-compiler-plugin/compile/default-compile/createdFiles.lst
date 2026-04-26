@@ -1,4 +1,10 @@
+persistence\exceptions\NonexistentEntityException.class
+persistence\exceptions\PreexistingEntityException.class
+persistence\exceptions\IllegalOrphanException.class
 logica\Estudiante.class
 svEstudiante.class
 com\mycompany\modulo2\JakartaRestConfiguration.class
+persistence\ControladoraPersistencia.class
+persistence\EstudianteJpaController.class
 com\mycompany\modulo2\resources\JakartaEE8Resource.class
+logica\Controladora.class
